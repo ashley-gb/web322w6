@@ -28,11 +28,14 @@ router.post("/add", adminAccess, (req,res)=>{
     if(req.files==null){
         errors.push("Please upload a picture of the listing");
     }
+
     else {
+        //If user uploads incorrect file type (Ie. doc, pdf)
         if(req.files.image.mimetype.indexOf("image")==-1){
             errors.push("Invalid file extension");
         }
     }
+
     //Save the new listing in DB
     const listing = new Listings(newListing)
     listing.save()
@@ -47,6 +50,7 @@ router.post("/add", adminAccess, (req,res)=>{
         console.log("Your listings has been added to the DB!");
         res.redirect("/Listings/viewListings");
     })
+    //Error Handling
     .catch((err)=>{
         console.log("An error occurred: " + err);
     })
@@ -54,12 +58,27 @@ router.post("/add", adminAccess, (req,res)=>{
 
 //Edit Listings
 router.get("/edit/:id", adminAccess, (req,res)=>{
+    //Search for existing listing
     Listings.findById(req.params.id)
     .then((listings)=>{
-        res.render("Listings/editListing", {
-            lists: listings
-        })
+        //If no matches found
+        if(Listings==null){
+            errors.push("No matching listings found");
+            res.render("Listings/editListing",{
+                errors: errors
+            })
+        }
+        //Otherwise display requested listing
+        else {
+            res.render("Listings/editListing", {
+                lists: listings
+            })
+        }
     }) 
+    //Error handling
+    .catch((err)=>{
+        console.log("An error occurred: " + err);
+    })
 });
 
 //View Listings
