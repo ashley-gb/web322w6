@@ -1,0 +1,17 @@
+<!-- Form to Edit Existing Listings -->
+ <h2>Edit Listing</h2>
+
+    <form method="POST" action="/task/edit/{{taskDocument._id}}/?_method=PUT">
+        <label>City</label>
+        <input type="text" name="city" id="city" value"{{task}}> <br>
+        <label>Title</label>
+        <input type="text" name="title" id="title"> <br>
+        <label>Description</label>
+        <input type="text" name="description" id="description"> <br>
+        <label>Image</label>
+        <input type="text" name="img" id="img"> <br>
+        <label>Price</label>
+        <input type="number" name="price" id="price"> <br>
+
+        <input type="submit" value="Add Listing">
+    </form>

@@ -1,0 +1,67 @@
+/* CSS Styling for AirBnb app */
+
+header {
+  background-color: #FEE9E4;
+}
+
+#logo {
+  float: left;
+}
+
+a:link {
+  display: inline-block;
+  font-family: "Book Antiqua", Palatino, serif;
+  text-decoration: none;
+  color: #E35451;
+  border-color: darkred;
+  border-width: 1px;
+  border-right-style: solid;
+  padding-top: 21px;
+  padding-right: 10px;
+  padding-bottom: 22px;
+  padding-left: 10px;
+}
+
+body {
+  background-color: seashell;
+}
+
+h1 {
+  font-family: "Book Antiqua", Palatino, serif;
+  color: darkred;
+  font-weight: bold;
+  text-align:center;
+}
+
+h2 {
+  font-family: "Book Antiqua", Palatino, serif;
+  color: crimson;
+  font-weight: bold;
+  text-align:center;
+}
+
+label {
+  font-family: "Book Antiqua", Palatino, serif;
+  color: crimson;
+  text-align:justify;
+}
+
+div {
+  font-family: "Book Antiqua", Palatino, serif;
+  color: #E35451;
+  text-align:justify;
+}
+
+a:link:active {
+  color: darkred;
+}
+
+footer {
+  background-color: #FEE9E4;
+  font-family: "Book Antiqua", Palatino, serif;
+  color: #E62F1F;
+  padding: 10px;
+  text-align:justify;
+}
+
+

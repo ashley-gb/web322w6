@@ -1,0 +1,18 @@
+<!-- User Login Form-->
+<h2>Join EhBnB Today!</h2><br>
+<form action="user_reg.hbs" method="POST">
+  <label>Email: </label>
+  <input id="email" type="text" name="email"/><br>
+  <label>First Name: </label>
+  <input id="fName" type="text" name="firstName"/><br>
+  <label>Last Name: </label>
+  <input id="lName" type="text" name="lastName"/><br>
+  <label>Password (6-12 characters long): </label>
+  <input id="password" type="password" name="Password"/><br>
+  <label>Confirm Password</label>
+  <input id="password-conf" type="password" name="Password-conf"/><br>
+  <input type="submit" value="Sign Up" /><br />
+</form>
+{{#each errors}}
+  <span class="error">{{this}}</span>
+{{/each}}

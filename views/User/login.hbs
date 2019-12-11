@@ -1,0 +1,12 @@
+<!-- User Login Form-->
+<h2>Log in</h2><br>
+<form action="login.hbs" method="POST" novalidate>
+  <label>Username: </label>
+  <input id="userName" type="text" name="Username"/><br>
+  <label>Password: </label>
+  <input id="password" type="password" name="Password"/><br>
+  <input type="submit" value="Log in" /><br />
+</form>
+{{#each errors}}
+  <span class="error">{{this}}</span>
+{{/each}}

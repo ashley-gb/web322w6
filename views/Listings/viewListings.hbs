@@ -1,0 +1,18 @@
+<!-- Page to show existing listings -->
+<h2>View Listings</h2>
+<!-- For each property listed matching user criteria-->
+{{#each listing}}
+<div class="listing">
+  <tr>
+    <img src={{this.image}} id="preview" alt={{this.title}} height="150" width="150">
+    <td>{{this.city}}</td>
+    <td>{{this.title}}</td>
+    <td>{{this.price}}</td>
+  </tr>
+</div>
+<!-- Otherwise, if no listings matching those requirements are found-->
+{{else}}
+  <tr>
+    <td colspan="5">No Matches Found</td>
+  </tr>
+{{/each}}

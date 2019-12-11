@@ -1,0 +1,8 @@
+Notes: To-do
+Last Updated: Dec. 7th, 2019
+1) Ensure application is fully running/ connected to Mongo DB Atlas Server
+2) Verify user sessions are working properly
+3) Administrator Module:  
+    -Fileupload not working
+    -Search module
+4) A6: Booking Module
